@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
 <body>
-<img src="news.jpg" style="width:100%;">
+<center>
+<img src="news.jpg" style="max-width:100%">
+</center>
 </body>
 </html>
+<script>
+const xhttp = new XMLHttpRequest();
+xhttp.onload = function() {
+    document.title = this.responseText;
+}
+xhttp.open("GET", "/title.txt", true);
+xhttp.send();
+// Tue  8 Nov 2022 21:42:29 GMT
+</script>
